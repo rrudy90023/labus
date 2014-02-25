@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  story: MyString
+  bus: MyString
+  busline: 1
+
+two:
+  story: MyString
+  bus: MyString
+  busline: 1

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @rider.story %>
+</p>
+
+<p>
+  <strong>Bus:</strong>
+  <%= @rider.bus %>
+</p>
+
+<p>
+  <strong>Busline:</strong>
+  <%= @rider.busline %>
+</p>
+
+<%= link_to 'Edit', edit_rider_path(@rider) %> |
+<%= link_to 'Back', riders_path %>

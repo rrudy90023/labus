@@ -1,0 +1,31 @@
+<h1>Listing riders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Story</th>
+      <th>Bus</th>
+      <th>Busline</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @riders.each do |rider| %>
+      <tr>
+        <td><%= rider.story %></td>
+        <td><%= rider.bus %></td>
+        <td><%= rider.busline %></td>
+        <td><%= link_to 'Show', rider %></td>
+        <td><%= link_to 'Edit', edit_rider_path(rider) %></td>
+        <td><%= link_to 'Destroy', rider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rider', new_rider_path %>
