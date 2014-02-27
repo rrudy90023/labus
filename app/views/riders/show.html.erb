@@ -15,5 +15,10 @@
   <%= @rider.busline %>
 </p>
 
-<%= link_to 'Edit', edit_rider_path(@rider) %> |
+
+<% if @rider.user == current_user %>
+	<%= link_to 'Edit', edit_rider_path(@rider) %> |
+	
+<% end %>
+
 <%= link_to 'Back', riders_path %>

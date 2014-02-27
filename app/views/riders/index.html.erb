@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Story</th>
+      <th>User</th>
       <th>Bus</th>
       <th>Busline</th>
       <th></th>
@@ -16,16 +17,23 @@
     <% @riders.each do |rider| %>
       <tr>
         <td><%= rider.story %></td>
+        <td><%= rider.user.email if rider.user %></td>
         <td><%= rider.bus %></td>
         <td><%= rider.busline %></td>
         <td><%= link_to 'Show', rider %></td>
+
+        <% if rider.user == current_user %>
         <td><%= link_to 'Edit', edit_rider_path(rider) %></td>
         <td><%= link_to 'Destroy', rider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to 'New Rider', new_rider_path %>
+<% end %>

@@ -1,5 +1,7 @@
 class RidersController < ApplicationController
   before_action :set_rider, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /riders
   # GET /riders.json
@@ -14,7 +16,7 @@ class RidersController < ApplicationController
 
   # GET /riders/new
   def new
-    @rider = Rider.new
+    @rider = current_user.riders.build
   end
 
   # GET /riders/1/edit
@@ -24,7 +26,7 @@ class RidersController < ApplicationController
   # POST /riders
   # POST /riders.json
   def create
-    @rider = Rider.new(rider_params)
+    @rider = current_user.riders.build(rider_params)
 
       if @rider.save
       redirect_to @rider, notice: 'Rider was successfully created.' 
@@ -61,6 +63,15 @@ class RidersController < ApplicationController
     def set_rider
       @rider = Rider.find(params[:id])
     end
+
+
+
+    def correct_user
+
+      @rider = current_user.riders.find_by(id: params[:id])
+      redirect_to riders_path, notice: "Not Authorize to edit this rider" if @rider.nil?
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rider_params
