@@ -47,7 +47,7 @@ class RidersController < ApplicationController
       else
       render action: 'edit'
     end
-
+    end
 
   # DELETE /riders/1
   # DELETE /riders/1.json
@@ -55,7 +55,7 @@ class RidersController < ApplicationController
     @rider.destroy
     redirect_to riders_url
 
-    end
+
   end
 
   private
