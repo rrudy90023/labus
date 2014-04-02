@@ -2,7 +2,7 @@ Labus::Application.routes.draw do
   resources :riders
 
   devise_for :users
-  root "pages#home"
+  root "riders#index"
 
   get "about" => "pages#about"
 

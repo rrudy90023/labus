@@ -1,24 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Story:</strong>
-  <%= @rider.story %>
-</p>
-
-<p>
-  <strong>Bus:</strong>
-  <%= @rider.bus %>
-</p>
-
-<p>
-  <strong>Busline:</strong>
-  <%= @rider.busline %>
-</p>
+<!--<p id="notice"><%= notice %></p>-->
 
 
-<% if @rider.user == current_user %>
-	<%= link_to 'Edit', edit_rider_path(@rider) %> |
-	
-<% end %>
+<div id="riders">
+	<div class="box panel panel-default">
+		 <div class="panel-body">
+			<div>LINE
+      
+                    <%= @rider.bus %></br>
+                    <span><%= @rider.story %></span>
+             
+            </div>
+          
+            </br>
+            <%= @rider.user.name if @rider.user %>
+            </br>
 
-<%= link_to 'Back', riders_path %>
+			<!--<p>
+			  <strong>Busline:</strong>
+			  <%= @rider.busline %>
+			</p>-->
+
+
+		<% if @rider.user == current_user %>
+			<%= link_to 'Edit', edit_rider_path(@rider) %> |
+			
+		<% end %>
+
+		<%= link_to 'Back', riders_path %>
+	</div>
+	</div>
+</div>
+
+
+
+
+

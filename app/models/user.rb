@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
 
 
          has_many :riders
-
+		 validates :name, presence: true
 end
