@@ -6,7 +6,7 @@ class RidersController < ApplicationController
   # GET /riders
   # GET /riders.json
   def index
-    @riders = Rider.all.order("created_at ASC").paginate(:page => params[:page], :per_page => 3)
+    @riders = Rider.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
 
 
   end
