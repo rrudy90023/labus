@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :story %>
+    <%= f.label :story, 'STORY' %>
     <%= f.text_field :story, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :bus %>
+    <%= f.label :bus, 'BUS' %>
     <%= f.text_field :bus, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :busline %>
+    <%= f.label :busline, 'BUSLINE' %>
     <%= f.number_field :busline, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.submit class: "btn btn-primary" %>
+    <%= f.submit "CREATE RIDER", class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -22,7 +22,7 @@
 
 
 		<% if @rider.user == current_user %>
-			<%= link_to 'Edit', edit_rider_path(@rider) %> |
+			<%= link_to 'EDIT', edit_rider_path(@rider), class: "btn btn-primary" %>
 
 			<script>
 				document.getElementById('sharer').onclick = function () {
@@ -36,10 +36,10 @@
 
 
 
-			<button id="sharer">Share</button>
+			<div class="btn btn-primary">SHARE</div>
 		<% end %>
 
-		<%= link_to 'Back', riders_path %>
+		<%= link_to 'BACK', riders_path, class: "btn btn-primary" %>
 	</div>
 	</div>
 </div>

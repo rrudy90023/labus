@@ -3,7 +3,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="panel-title">
-      <h1>Forgot your password?</h1>
+      <h1>FORGOT YOUR PASSWORD?</h1>
     </div>
   </div>
   <div class="panel-body">
@@ -11,12 +11,12 @@
       <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.label :email %>
+        <%= f.label :email, 'EMAIL' %>
         <%= f.email_field :email, class: "form-control", :autofocus => true %>
       </div>
 
       <div class="form-group">
-        <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+        <%= f.submit "SEND ME RESET PASSWORD INSTRUCTIONS", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>

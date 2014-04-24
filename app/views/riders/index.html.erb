@@ -1,7 +1,7 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 <% if user_signed_in? %>
-<%= link_to 'New Rider', new_rider_path %>
+<%= link_to 'NEW RIDER', new_rider_path, class: "btn btn-primary" %>
 
 <div id="riders">
     <% @riders.each do |rider| %>
@@ -18,12 +18,12 @@
             </br>
             <%= rider.user.name if rider.user %>
             </br>
-            <%= rider.busline %>
-            <%= link_to 'Show', rider %>   
+            <!--<%= rider.busline %>-->
+            <%= link_to 'SHOW', rider, class: "btn btn-primary" %>   
 
             <% if rider.user == current_user %>
-            <%= link_to 'Edit', edit_rider_path(rider) %>   
-            <%= link_to 'Destroy', rider, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'EDIT', edit_rider_path(rider), class: "btn btn-primary" %>   
+            <%= link_to 'DESTROY', rider, class: "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %>
 
             <% end %>
         </div>
@@ -36,7 +36,7 @@
 
 
         <div class="center">
-        <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+        <%= will_paginate @posts, :page_links => false, renderer: BootstrapPagination::Rails %>
         </div>
 
 </div>
