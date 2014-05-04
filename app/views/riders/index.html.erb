@@ -1,7 +1,14 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 <% if user_signed_in? %>
-<%= link_to 'NEW RIDER', new_rider_path, class: "btn btn-primary" %>
+<%= link_to new_rider_path do%>
+  <%= image_tag "http://rudemedia.org/labus/sidebus.png", class: "center" %>
+  <% end %>
+
+
+
+
+
 
 <div id="riders">
     <% @riders.each do |rider| %>

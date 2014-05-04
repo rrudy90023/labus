@@ -11,32 +11,32 @@ $jumbotron-bg:                      white;
 @import 'bootstrap';
 
 .center {
-    text-align: center;
-    background-color: white;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+text-align: center;
+background-color: white;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
 
-    padding: 10px 15px;
-    color: #000000!important;
-    font-size: 34px;
-    font-weight: bold;
+padding: 10px 15px;
+color: #000000!important;
+font-size: 24px;
+font-weight: bold;
 }
 
 .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus{ color:#000000; }
 
 
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus { background-color: #FF0000;
- border-color: #FF0000;   }
+border-color: #FF0000;   }
 
 .pagination > li > a, .pagination > li > span { color:#000000;  }
 
 .navbar-brand {
-     font-weight: bold;
+font-weight: bold;
 }
 
 .navbar-default{
 
-	 border-color: white;
+border-color: white;
 }
 
 .homer{
@@ -53,81 +53,89 @@ input { text-transform:uppercase; font-size:34px; color:#000000;  }
 
 .jumbotron { padding:0;}
 
-.panel-body{font-size:34px;}
+.panel-body{font-size:24px;}
 
 h1{font-weight: 600!important;}
 
 label{font-weight: bold !important;}
 
 .btn-primary {
-    background-color: #FF0000;
-    border-color: #FF0000;
-    color: #FFFFFF;
+background-color: #FF0000;
+border-color: #FF0000;
+color: #FFFFFF;
 }
 
 .btn {
 
 -moz-user-select: none;
-    background-image: none;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 0;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 34px;
-    font-weight: bold;
-    line-height: 1.42857;
-    margin-bottom: 0;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
+background-image: none;
+// border: 0px solid rgba(0, 0, 0, 0);
+// border-radius: 0;
+cursor: pointer;
+display: inline-block;
+font-size: 24px;
+font-weight: bold;
+line-height: 1.42857;
+margin-bottom: 0;
+text-align: center;
+vertical-align: middle;
+white-space: nowrap;
 }
 
 
 .panel-default > .panel-heading {
-    background-color: white;
-    border-color: #DDDDDD;
-    color: #333333;
+background-color: white;
+border-color: white;
+// color: #333333;
 }
 
 
 .panel-footer {
-    background-color: white;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-top: 1px solid #DDDDDD;
-    padding: 10px 15px;
-    color: #000000;
-    font-size: 34px;
-    font-weight: bold;
+background-color: white;
+// border-bottom-left-radius: 3px;
+// border-bottom-right-radius: 3px;
+border-top: 0px solid #DDDDDD;
+padding: 10px 15px;
+color: #000000;
+font-size: 24px;
+font-weight: bold;
 }
 
 
 a {
-    color: black;
-    text-decoration: none;
+color: black;
+text-decoration: none;
 }
 
 
 a:hover, a:focus {
-    color: black;
-    text-decoration: underline;
+color: black;
+text-decoration: underline;
 }
 
 .panel-body{
 
-    background-color: white;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-top: 1px solid #DDDDDD;
-    padding: 10px 15px;
-    color: #000000;
-    font-size: 34px;
-    font-weight: bold;
-    text-transform:uppercase;
+background-color: white;
+// border-bottom-left-radius: 3px;
+// border-bottom-right-radius: 3px;
+// border-top: 1px solid #DDDDDD;
+padding: 10px 15px;
+color: #000000;
+font-size: 24px;
+font-weight: bold;
+text-transform:uppercase;
 
 }
 
 
+
+.panel {
+background-color: #FFFFFF;
+border: 0px solid rgba(0, 0, 0, 0);
+border-radius: 0px;
+box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
+margin-bottom: 20px;
+}
 
 
 
